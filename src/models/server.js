@@ -12,8 +12,8 @@ class Server {
     constructor(){
         this.app = express();
         this.port = process.env.PORT || 4005;
-        this.routes()
-        this.useMiddlewares()
+        this.useMiddlewares();
+        this.routes();
         
     }
     
@@ -26,7 +26,8 @@ class Server {
     // Middlewares
     useMiddlewares(){
         this.app.use( cors() );
-        this.app.use( express.json() )
+        this.app.use( express.json() );
+
     }
 
     // Poner a escuchar el servidor en el puerto

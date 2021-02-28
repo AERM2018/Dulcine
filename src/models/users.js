@@ -2,6 +2,12 @@ const { DataTypes } = require('sequelize')
 const db = require('../db/connector')
 
 const User = db.define('User', {
+    id_user : {
+        type: DataTypes.INTEGER,
+        primaryKey:true,
+        autoIncrement: true
+
+    },
     username : {
         type : DataTypes.STRING
     },
@@ -11,6 +17,8 @@ const User = db.define('User', {
     email : {
         type : DataTypes.STRING
     },
+},{
+    timestamps: false
 });
 
 module.exports = User;
